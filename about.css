@@ -1,0 +1,484 @@
+/* =========================
+   hollowboat — about.css
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  background:#ece1d1;
+
+  color:#2b241f;
+
+  overflow-x:hidden;
+
+  font-family:'Inter',sans-serif;
+
+  opacity:1;
+
+  transition:opacity 1s ease;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-page{
+
+  min-height:100vh;
+  width:100%;
+
+  position:relative;
+
+  background:
+  linear-gradient(rgba(255,255,255,0.18),
+  rgba(255,255,255,0.20)),
+
+  url("https://raw.githubusercontent.com/hollowboat/AboutUs/main/Assests/Background.png");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  overflow:hidden;
+}
+
+/* =========================
+   GRAIN
+========================= */
+
+.about-page::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background-image:
+  url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+
+  opacity:0.06;
+
+  mix-blend-mode:multiply;
+
+  pointer-events:none;
+
+  z-index:1;
+}
+
+/* =========================
+   FOG
+========================= */
+
+.fog{
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  radial-gradient(circle at 20% 30%,
+  rgba(255,255,255,0.20),
+  transparent 40%),
+
+  radial-gradient(circle at 80% 20%,
+  rgba(255,255,255,0.14),
+  transparent 35%);
+
+  animation:fogMove 18s ease-in-out infinite alternate;
+
+  pointer-events:none;
+
+  z-index:2;
+}
+
+@keyframes fogMove{
+
+  from{
+    transform:translateY(0px);
+  }
+
+  to{
+    transform:translateY(-10px);
+  }
+
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+
+  width:100%;
+
+  padding:42px 60px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  position:relative;
+
+  z-index:10;
+}
+
+.logo{
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:1.4rem;
+
+  letter-spacing:8px;
+
+  font-weight:300;
+
+  opacity:0.92;
+}
+
+.nav-links{
+
+  display:flex;
+
+  gap:40px;
+}
+
+.nav-links a{
+
+  font-size:0.76rem;
+
+  letter-spacing:3px;
+
+  text-transform:lowercase;
+
+  opacity:0.78;
+
+  transition:0.4s ease;
+}
+
+.nav-links a:hover{
+  opacity:1;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.about-container{
+
+  width:100%;
+
+  min-height:75vh;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  gap:100px;
+
+  padding:80px 90px;
+
+  position:relative;
+
+  z-index:5;
+}
+
+/* =========================
+   LEFT
+========================= */
+
+.about-left{
+
+  width:45%;
+}
+
+.about-left h1{
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:clamp(3rem,6vw,5rem);
+
+  font-weight:400;
+
+  line-height:1.15;
+
+  letter-spacing:3px;
+
+  margin-bottom:40px;
+}
+
+.about-left p{
+
+  max-width:420px;
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:1.15rem;
+
+  line-height:2;
+
+  letter-spacing:2px;
+
+  opacity:0.82;
+}
+
+/* =========================
+   RIGHT
+========================= */
+
+.about-right{
+
+  width:42%;
+}
+
+/* FORM */
+
+form{
+
+  width:100%;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:34px;
+}
+
+.input-group{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:12px;
+}
+
+label{
+
+  font-size:0.72rem;
+
+  letter-spacing:4px;
+
+  text-transform:lowercase;
+
+  opacity:0.8;
+}
+
+input{
+
+  width:100%;
+
+  background:transparent;
+
+  border:
+  1px solid rgba(0,0,0,0.18);
+
+  padding:18px 18px;
+
+  color:#2b241f;
+
+  font-size:0.9rem;
+
+  outline:none;
+
+  transition:0.4s ease;
+}
+
+input::placeholder{
+
+  color:
+  rgba(0,0,0,0.45);
+
+  letter-spacing:1px;
+}
+
+input:focus{
+
+  border:
+  1px solid rgba(0,0,0,0.35);
+
+  background:
+  rgba(255,255,255,0.10);
+}
+
+/* BUTTON */
+
+button{
+
+  margin-top:15px;
+
+  width:220px;
+
+  padding:18px 20px;
+
+  background:transparent;
+
+  border:
+  1px solid rgba(0,0,0,0.30);
+
+  font-size:0.75rem;
+
+  letter-spacing:5px;
+
+  text-transform:lowercase;
+
+  cursor:pointer;
+
+  transition:0.4s ease;
+
+  color:#2b241f;
+}
+
+button:hover{
+
+  background:
+  rgba(255,255,255,0.18);
+
+  transform:
+  translateY(-2px);
+}
+
+/* =========================
+   BOAT LOGO
+========================= */
+
+.boat-logo{
+
+  width:100%;
+
+  display:flex;
+  justify-content:center;
+
+  margin-top:40px;
+
+  position:relative;
+
+  z-index:5;
+}
+
+.boat-logo img{
+
+  width:140px;
+
+  opacity:0.75;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+  width:100%;
+
+  padding:35px 60px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  border-top:
+  1px solid rgba(0,0,0,0.08);
+
+  position:relative;
+
+  z-index:5;
+
+  margin-top:40px;
+}
+
+footer p,
+footer a{
+
+  font-size:0.72rem;
+
+  letter-spacing:4px;
+
+  opacity:0.7;
+}
+
+.footer-links{
+
+  display:flex;
+
+  gap:40px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+  .about-container{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:80px;
+
+    padding:60px 30px;
+  }
+
+  .about-left,
+  .about-right{
+
+    width:100%;
+  }
+
+  .about-left h1{
+
+    font-size:3rem;
+  }
+
+  nav{
+    padding:28px 24px;
+  }
+
+  footer{
+
+    padding:28px 24px;
+
+    flex-direction:column;
+
+    gap:20px;
+  }
+
+  .logo{
+
+    font-size:1rem;
+
+    letter-spacing:5px;
+  }
+
+  .nav-links{
+
+    gap:18px;
+  }
+
+  .nav-links a{
+
+    font-size:0.65rem;
+
+    letter-spacing:2px;
+  }
+
+  button{
+
+    width:100%;
+  }
+
+}
