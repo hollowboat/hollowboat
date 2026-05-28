@@ -28,24 +28,22 @@ body{
    BACKGROUND IMAGE
 ========================= */
 
-.background{
+.bg-video{
 
   position:absolute;
 
   inset:0;
 
-  background:
-  url("https://raw.githubusercontent.com/hollowboat/AboutUs/main/Assests/hollowboat%20logo.png");
+  width:100%;
+  height:100%;
 
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+  object-fit:cover;
 
   filter:
-  blur(80px)
-  brightness(0.35);
+  brightness(0.38)
+  blur(1px);
 
-  transform:scale(1.2);
+  transform:scale(1.03);
 
   z-index:1;
 }
